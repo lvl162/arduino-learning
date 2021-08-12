@@ -13,8 +13,6 @@ void setup() {
   Serial.flush();
   }
 
-
-
 void setLED(char* s) {
   char x = s[0];
   String n = (String) s;
@@ -23,9 +21,7 @@ void setLED(char* s) {
 //  Serial.println(x);
 //  Serial.println(nx);
   if (x == 'R') {
-
     analogWrite(r, nx);
-    
     }
   if (x == 'G') {
     analogWrite(g, nx);}
@@ -70,10 +66,10 @@ void setLED(char* s) {
       for (int i = 0; i<index-1; i++) {
 
         String st = s.substring(ids[i], ids[i+1]);
-        Serial.println(st);
+        // Serial.println(st);
         setLED(st.c_str());
         }
-        Serial.println(s.substring(ids[index-1]));
+        // Serial.println(s.substring(ids[index-1]));
         setLED(s.substring(ids[index-1]).c_str());
     
   
